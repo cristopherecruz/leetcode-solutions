@@ -8,15 +8,18 @@ public class SimpleBankSystem {
         long[] balance = {10, 100, 20, 50, 30};
 
         Bank obj = new Bank(balance);
-        //boolean param_1 = obj.transfer(5, 1, 20);
-        //boolean param_2 = obj.deposit(1, 10);
-        //boolean param_3 = obj.withdraw(3, 10);
-        //System.out.println(param_1);
+        boolean param_1 = obj.withdraw(3, 10);
+        boolean param_2 = obj.transfer(5, 1, 20);
+        boolean param_3 = obj.deposit(5, 20);
+
+        System.out.println(param_1);
+        System.out.println(param_2);
+        System.out.println(param_3);
     }
 
     static class Bank {
 
-        private long[] balance;
+        private final long[] balance;
 
         public Bank(long[] balance) {
             this.balance = balance;
